@@ -1,6 +1,10 @@
 //import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
-
+/* *****************************************************************************
+ *  Name: Edward Jin
+ *  Date: 6/18/2021
+ *  Description: Percolation Class
+ **************************************************************************** */
 
 import java.io.*;
 import java.util.StringTokenizer;
