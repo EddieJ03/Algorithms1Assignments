@@ -1,7 +1,7 @@
 /* *****************************************************************************
  *  Name: Edward Jin
  *  Date: 7/17/2021
- *  Description: Sorting Based Collinear Algorithm
+ *  Description: Sorting Based Algorithm to find 4 Collinear Points Out of A Set of n points
  **************************************************************************** */
 
 // import edu.princeton.cs.algs4.In;
