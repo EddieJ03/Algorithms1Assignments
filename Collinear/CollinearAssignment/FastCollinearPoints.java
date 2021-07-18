@@ -31,17 +31,26 @@ public class FastCollinearPoints {
         if (points == null) {
             throw new IllegalArgumentException();
         }
+	    
+	 for (int i = 0; i < points.length; i++) {
+            if (points[i] == null) {
+                throw new IllegalArgumentException();
+            } else {
+              for (int j = i + 1; j < points.length; j++) {
+                  if (points[j] == null) {
+                      throw new IllegalArgumentException();
+                  }
+                  else if (points[i].compareTo(points[j]) == 0) {
+                      throw new IllegalArgumentException();
+                  }
+              }
+            }
+        }
 
         Point[] jCopy = points.clone();
 
-        boolean existsSmaller;
-
         //sort first, makes it easier to loop through to find if next element different from current element ( nlog(n) )
         Arrays.sort(jCopy);
-        
-        if (hasDuplicate(jCopy)) {
-            throw new IllegalArgumentException("You have duplicate points");
-        }
 
         allSegments = new ArrayList<LineSegment>();
 
@@ -72,15 +81,6 @@ public class FastCollinearPoints {
 
         }
 
-    }
-
-    private boolean hasDuplicate(Point[] points) {
-        for (int i = 0; i < points.length - 1; i++) {
-            if (points[i].compareTo(points[i + 1]) == 0) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public int numberOfSegments() {
