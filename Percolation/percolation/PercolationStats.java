@@ -2,6 +2,12 @@
 // import edu.princeton.cs.algs4.StdRandom;
 // import edu.princeton.cs.algs4.StdStats;
 
+/* *****************************************************************************
+ *  Name: Edward Jin
+ *  Date: 6/18/2021
+ *  Description: PercolationStats Class
+ **************************************************************************** */
+
 public class PercolationStats {
 
     private final double[] trialResults;
